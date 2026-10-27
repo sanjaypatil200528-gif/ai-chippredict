@@ -17,13 +17,14 @@ from sklearn.metrics import (
     f1_score, roc_auc_score
 )
 
-MODEL_PATH = Path("models/timing_violation_rf.joblib")
-FEATURES_PATH = Path("dataset/rtl_features.csv")
-DATASET_PATH = Path("dataset/timing_ml_dataset.csv")
-STA_PATH = Path("results/timing_sweep/all_circuits_timing_sweep.csv")
-RESULTS_DIR = Path("results/model_comparison")
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
+MODEL_PATH = BASE_DIR / "models" / "timing_violation_rf.joblib"
+FEATURES_PATH = BASE_DIR / "dataset" / "rtl_features.csv"
+DATASET_PATH = BASE_DIR / "dataset" / "timing_ml_dataset.csv"
+STA_PATH = BASE_DIR / "results" / "timing_sweep" / "all_circuits_timing_sweep.csv"
+RESULTS_DIR = BASE_DIR / "results" / "model_comparison"
+RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 st.set_page_config(
     page_title="AI ChipPredict | Model Benchmark",
     page_icon="⚡",
