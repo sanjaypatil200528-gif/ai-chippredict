@@ -1,0 +1,12 @@
+read_verilog rtl/ripple_carry_adder.v
+hierarchy -check -top ripple_carry_adder
+
+synth -top ripple_carry_adder
+
+abc -liberty /home/sanja/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+clean
+stat -liberty /home/sanja/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+write_verilog -noattr -simple-lhs results/ripple_carry_adder_sky130.v
+write_json results/ripple_carry_adder_sky130.json

@@ -1,0 +1,9 @@
+read_verilog rtl/barrel_shifter_8bit.v
+hierarchy -top barrel_shifter_8bit
+synth -top barrel_shifter_8bit
+dfflibmap -liberty /home/sanja/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/sanja/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+stat -liberty /home/sanja/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr -simple-lhs results/barrel_shifter_8bit_sky130.v
+write_json results/barrel_shifter_8bit_sky130.json

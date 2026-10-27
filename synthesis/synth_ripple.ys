@@ -1,0 +1,15 @@
+read_verilog rtl/ripple_carry_adder.v
+
+hierarchy -check -top ripple_carry_adder
+
+proc
+opt
+check
+
+techmap
+opt
+
+stat
+
+write_verilog results/ripple_carry_adder_netlist.v
+write_json results/ripple_carry_adder_netlist.json

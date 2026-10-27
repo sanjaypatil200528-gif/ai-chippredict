@@ -1,0 +1,7 @@
+circuit,source_lines,input_bits,output_bits,wire_bits,multiply_count,plus_count,minus_count,and_count,or_count,xor_count,relational_count,equality_count,shift_count,ternary_count,cell_count,cell_area,path_startpoint,path_endpoint,data_arrival_ns,input_delay_ns,estimated_cell_path_delay_ns,required_time_ns,slack_ns,timing_violation,wns_ns,tns_ns
+array_multiplier_8bit,9,16,16,32,1,0,0,0,0,0,0,0,0,0,236,1928.0992,b[1],product[15],4.21,1.00,3.21,9.00,4.79,0,0.00,0.00
+barrel_shifter_8bit,12,12,8,20,0,0,0,0,0,0,4,0,2,1,69,422.9056,shift_amt[0],data_out[4],1.64,1.00,0.64,9.00,7.36,0,0.00,0.00
+cla_adder_8bit,29,17,9,43,0,0,0,25,14,2,0,0,0,0,24,220.2112,cin,cout,4.12,1.00,3.12,9.00,4.88,0,0.00,0.00
+comparator_8bit,13,16,3,19,0,0,0,0,0,0,2,1,0,0,29,185.1776,b[6],greater,1.98,1.00,0.98,9.00,7.02,0,0.00,0.00
+mux_8bit,10,17,8,25,0,0,0,0,0,0,0,0,0,1,8,90.0864,sel,y[0],1.27,1.00,0.27,9.00,7.73,0,0.00,0.00
+ripple_carry_adder,29,17,9,35,0,2,0,3,2,2,1,0,0,0,38,238.9792,cin,cout,2.90,1.00,1.90,9.00,6.10,0,0.00,0.00
